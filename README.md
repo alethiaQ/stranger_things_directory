@@ -16,14 +16,14 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
+Or install it yourself as (recommended):
 
     $ gem install stranger_things_directory
 
 ## Usage
 
 Type the below command and follow along with the prompts:
-   $ stranger_things_directory
+   $ "stranger_things_directory"
 
 ## Development
 
