@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+
+require_relative '../lib/stranger_things_directory'
+
+#We don't want any real logic or programming to go here, that could cause issues/a broken program.. so we want to call another file that has the logic within it 
+# we don't have this file yet, but I want to kind of have an idea of what I want the program to look like, and it would make the most sense to have a CLI class that does the running for me 
+
+
+StrangerThingsDirectory::CLI.new.call 
