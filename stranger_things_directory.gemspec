@@ -1,6 +1,6 @@
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "stranger_things_directory/version"
+#lib = File.expand_path('../lib', __FILE__)
+#$LOAD_PATH.unshift(lib) unless #$LOAD_PATH.include?(lib)
+require_relative  '../lib/stranger_things_directory/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "stranger_things_directory"
@@ -8,20 +8,19 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Alethia Quintero"]
   spec.email         = ["alethiaq22@gmail.com"]
 
-  spec.summary       = %q{A Stranger Things Character and Location information guide}
-  spec.description   = %q{A user will choose between a list of trending Stranger Things characters or locations, the list will be shown, the user will choose a number representing an item, then information about that item will appear.}
-  spec.homepage      = ""
+  spec.summary       = "A Stranger Things Character and Location information guide"
+  spec.description   = "A user will choose between a list of trending Stranger Things characters or locations, the list will be shown, the user will choose a number representing an item, then information about that item will appear"
+  spec.homepage      = 'https://rubygems.org/gems/stranger_things_directory'
   spec.license       = "MIT"
 
   
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
-  spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
-    `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
-  end
-  spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
+  spec.files         = ["lib/stranger_things_directory.rb","lib/stranger_things_directory/cli.rb", "lib/stranger_things_directory/location_scraper.rb", "lib/stranger_things_directory/locations.rb", "lib/stranger_things_directory/character_scraper.rb", "lib/stranger_things_directory/characters.rb",  "config/environment.rb"]
+  
+  #spec.bindir        = "exe"
+  spec.executables  << 'stranger_things_directory'
+  #spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 10.0"
