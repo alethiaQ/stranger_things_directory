@@ -7,7 +7,7 @@ class StrangerThingsDirectory::CharacterScraper
 
     def get_characters
        self.open_page.css("div#WikiaArticle.WikiaArticle ul.category-page__trending-pages li.category-page__trending-page")
-  
+        
     end
 
     def send_characters

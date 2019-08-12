@@ -1,6 +1,6 @@
 #lib = File.expand_path('../lib', __FILE__)
 #$LOAD_PATH.unshift(lib) unless #$LOAD_PATH.include?(lib)
-require_relative  '../lib/stranger_things_directory/version'
+require  './lib/stranger_things_directory/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "stranger_things_directory"
