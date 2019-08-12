@@ -22,7 +22,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Type the below command and follow along with the prompts:
+    $ stranger_things_directory
 
 ## Development
 
