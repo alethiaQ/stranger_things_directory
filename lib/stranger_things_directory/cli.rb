@@ -67,11 +67,16 @@ class StrangerThingsDirectory::CLI
     
     def pick_location
         puts "What location would you like to learn more about? Enter the number: "
-        input = gets.strip 
-        
-        location = StrangerThingsDirectory::Locations.find(input.to_i)
+        input = gets.strip.to_i
+        if input < StrangerThingsDirectory::Locations.all.length + 1 && input > 0
+            location = StrangerThingsDirectory::Locations.find(input)
 
-        location_info(location)
+            location_info(location)
+          
+        else
+            puts 'Try again'
+            pick_location
+        end
     end
     
     def location_info(location)
