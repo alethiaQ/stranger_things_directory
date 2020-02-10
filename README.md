@@ -1,7 +1,6 @@
 # StrangerThingsDirectory
 
-A basic "Stranger Things" CLI catalogue. 
-- Scraped data from 'trending' section of Fandom ST wiki page.
+StrangerThingsDirectory is an CLI Ruby gem. Using Object-oriented design practices, data is scraped, persisted, and utilized to compose a Stranger Things directory.  
 
 
 
